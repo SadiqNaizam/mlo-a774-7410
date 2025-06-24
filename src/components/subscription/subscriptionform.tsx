@@ -16,6 +16,7 @@ import {
 import { useToast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Please enter a valid email address.' }),
@@ -79,17 +80,19 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({ className }) => {
                   </FormItem>
                 )}
               />
-              <Button 
-                type="submit" 
-                disabled={form.formState.isSubmitting}
-                className="py-6 text-base"
-              >
-                {form.formState.isSubmitting ? (
-                  <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Subscribing...</>
-                ) : (
-                  'Subscribe'
-                )}
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button 
+                  type="submit" 
+                  disabled={form.formState.isSubmitting}
+                  className="py-6 text-base"
+                >
+                  {form.formState.isSubmitting ? (
+                    <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Subscribing...</>
+                  ) : (
+                    'Subscribe'
+                  )}
+                </Button>
+              </motion.div>
             </div>
           </form>
         </Form>
