@@ -2,6 +2,7 @@ import React from 'react';
 import { Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from '../theme-toggle';
 
 interface HeaderProps {
   className?: string;
@@ -38,7 +39,10 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
               </a>
             ))}
           </nav>
-          <Button variant="secondary">Deploy!</Button>
+          <div className="flex items-center gap-2">
+            <Button variant="secondary">Deploy!</Button>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
