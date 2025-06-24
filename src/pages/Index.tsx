@@ -3,6 +3,7 @@ import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import HeroSection from '../components/Hero/HeroSection';
 import SubscriptionForm from '../components/Subscription/SubscriptionForm';
+import RobotShowcase from '@/components/Showcase/RobotShowcase';
 
 /**
  * IndexPage serves as the main landing page for the application.
@@ -19,6 +20,7 @@ const IndexPage: React.FC = () => {
       <main className="flex-1 pt-16">
         {/* pt-16 offsets the content to prevent it from being hidden by the fixed header */}
         <HeroSection />
+        <RobotShowcase />
         <SubscriptionForm />
       </main>
       <Footer />
