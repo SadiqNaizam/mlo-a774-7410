@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface HeroSectionProps {
@@ -8,28 +8,29 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
   return (
-    <section className={cn('w-full py-12 md:py-24', className)}>
-      <div className="container px-4 md:px-6">
-        <div className="relative overflow-hidden rounded-2xl">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b] via-[#4338ca] to-[#f97316]" />
-          <div className="relative z-10 flex h-full flex-col items-start justify-between p-8 md:p-12 lg:p-16">
-            <div className="flex items-center gap-2 text-white">
-              <Sparkles className="h-6 w-6" />
-              <span className="text-lg font-bold">Pulse Robot</span>
-            </div>
-
-            <div className="w-full text-center py-16 md:py-24">
-              <p className="text-xl md:text-2xl font-light text-slate-200">
-                Made By
-              </p>
-              <h1 className="font-serif text-5xl font-extrabold tracking-tight text-white sm:text-7xl md:text-8xl lg:text-9xl">
-                AI <span className="font-light">&</span> Human
-              </h1>
-            </div>
-
-            <div />
+    <section className={cn('w-full py-12 md:py-24 lg:py-32', className)}>
+      <div className="container grid items-center gap-8 px-4 md:px-6 lg:grid-cols-2 lg:gap-16">
+        <div className="space-y-4 text-center md:text-left">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+            Intelligent Automation for the Modern Enterprise
+          </h1>
+          <p className="max-w-[600px] text-muted-foreground md:text-xl">
+            Pulse Robot combines cutting-edge AI with human oversight to streamline your workflows, boost productivity, and drive innovation.
+          </p>
+          <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center md:justify-start">
+            <Button size="lg">Get Started</Button>
+            <Button variant="outline" size="lg">
+              Learn More
+            </Button>
           </div>
         </div>
+        <img
+          src="/robot-hero.png"
+          alt="A futuristic robot assistant"
+          width={550}
+          height={550}
+          className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+        />
       </div>
     </section>
   );
