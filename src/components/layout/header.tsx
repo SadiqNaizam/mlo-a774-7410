@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pocket } from 'lucide-react';
+import { Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -8,9 +8,9 @@ interface HeaderProps {
 }
 
 const navItems = [
-  { name: 'Pokédex', href: '#' },
-  { name: 'Regions', href: '#' },
-  { name: 'Trainer Card', href: '#' },
+  { name: 'Mech Hangar', href: '#' },
+  { name: 'Arenas', href: '#' },
+  { name: 'Pilot ID', href: '#' },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ className }) => {
@@ -23,8 +23,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
     >
       <div className="container flex h-full items-center justify-between">
         <a href="/" className="flex items-center gap-2 mr-4">
-          <Pocket className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold text-foreground">Poké-App</span>
+          <Bot className="h-6 w-6 text-primary" />
+          <span className="text-lg font-bold text-foreground">Mech-Bay</span>
         </a>
         <div className="flex items-center gap-4 md:gap-6">
           <nav className="hidden md:flex items-center gap-6">
@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
               </a>
             ))}
           </nav>
-          <Button variant="secondary">Battle!</Button>
+          <Button variant="secondary">Deploy!</Button>
         </div>
       </div>
     </header>
