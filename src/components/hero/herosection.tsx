@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface HeroSectionProps {
   className?: string;
@@ -18,7 +19,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ className }) => {
             Assemble your squad! Combine strategy and engineering to build the most powerful mechs and dominate the arena.
           </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center md:justify-start">
-            <Button size="lg">Begin Assembly</Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button size="lg">Begin Assembly</Button>
+            </motion.div>
             <Button variant="outline" size="lg">
               View Blueprints
             </Button>
