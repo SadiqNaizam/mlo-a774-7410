@@ -1,15 +1,15 @@
 import React from 'react';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
-import HeroSection from '../components/Hero/HeroSection';
-import SubscriptionForm from '../components/Subscription/SubscriptionForm';
-import RobotShowcase from '@/components/Showcase/RobotShowcase';
+import HeroSection from '../components/hero/herosection';
+import SubscriptionForm from '../components/subscription/subscriptionform';
+import RobotShowcase from '@/components/showcase/robotshowcase';
 
 /**
- * IndexPage serves as the main landing page for the Pokémon-themed application.
- * It introduces trainers to their journey, allows them to choose a starter,
- * and subscribe for the latest news on their adventure.
- * This page is composed of a Header, HeroSection, RobotShowcase (re-themed as starters),
+ * IndexPage serves as the main landing page for the robot-themed application.
+ * It introduces pilots to their journey, allows them to choose a chassis,
+ * and subscribe for the latest news on mech combat.
+ * This page is composed of a Header, HeroSection, RobotShowcase,
  * a SubscriptionForm, and a Footer.
  */
 const IndexPage: React.FC = () => {
